@@ -225,7 +225,7 @@
                             "format": "image",
                             "required": true,
                             "placeholder": "",
-                            "description": "* المقاس المناسب للصورة هو 900×600 بكسل"
+                            "description": "* المقاس المناسب للصورة هو 900×700 بكسل"
                         },
                         {
                             "type": "string",
