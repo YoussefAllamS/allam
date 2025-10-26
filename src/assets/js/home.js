@@ -27,4 +27,8 @@ class Home extends BasePage {
     }
 }
 
+<<<<<<< HEAD
 Home.initiateWhenReady(['index']);
+=======
+Home.initiateWhenReady(['index']);
+>>>>>>> 808adbfa1df1a85bcf7e23cb0dbde43baf05b9f7
