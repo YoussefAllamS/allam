@@ -18,7 +18,7 @@ On this page, you will find all about Salla's Theme Raed updates, including freq
     - mobile-apps.twig
     - payment-methods.twig
     - social.twig
-  - Header's files 
+  - er's files 
     - menu-item.twig
     - breadcrumbs.twig
     - menu.twig

@@ -136,7 +136,7 @@ class Cart extends BasePage {
     }
 
 
-    //=================== Coupon Method ========================//
+    //  ===== Coupon Method    ===//
     initiateCoupon() {
         if (!app.couponCodeInput) {
             return;
