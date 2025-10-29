@@ -139,7 +139,7 @@ isElementLoaded(selector){
   this.isElementLoaded('#mobile-menu').then((menu) => {
 
  
-  const mobileMenu = new MobileMenu(menu, "(max-width: 1024px)", "( slidingSubmenus: false)");
+  const mobileMenu = new MobileMenu(menu, "(max-width: 2024px)", "( slidingSubmenus: false)");
 
   salla.lang.onLoaded(() => {
     mobileMenu.navigation({ title: salla.lang.get('blocks.header.main_menu') });
