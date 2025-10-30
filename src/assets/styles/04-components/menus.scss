@@ -119,13 +119,13 @@
       display: block !important;
     }
   }
-  .mobile-menu {
-      display: none;
-      @apply lg:hidden overflow-hidden;
-  }
-  .mm-ocd__content{
-    overflow-y: auto;
-  }
+  // .mobile-menu {
+  //     display: none;
+  //     @apply lg:hidden overflow-hidden;
+  // }
+  // .mm-ocd__content{
+  //   overflow-y: auto;
+  // }
   .mm-ocd-opened {
     .mobile-menu {
       display: block;

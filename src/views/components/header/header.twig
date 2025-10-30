@@ -13,11 +13,11 @@
       <div class="flex-1 flex items-center gap-2">
           {# Footer Menu #}
           {% if important_links %}
-            <salla-menu source="footer" topnav></salla-menu>
+            {# <salla-menu source="footer" topnav></salla-menu> #}
           {% endif %}
 
           {# Language & Currency Component #}
-          <div class="header-buttons">
+          {# <div class="header-buttons">
               {% if store.settings.is_multilingual or store.settings.currencies_enabled %}
                   <button type="button" onclick="salla.event.dispatch('localization::open')" class="btn--rounded-gray basis-0">
                       <span class="flag iti__flag iti__{{ user.language.country_code }} rounded-sm"></span>
@@ -25,7 +25,7 @@
                   </button>
                   <salla-localization-modal></salla-localization-modal>
               {% endif %}
-          </div>
+          </div> #}
 
           {# Scopes | Branches #}
           {% if store.scope %}
@@ -41,7 +41,7 @@
           </div>
       </div>
 
-      <salla-contacts is-header></salla-contacts>
+      {# <salla-contacts is-header></salla-contacts> #}
     </div>
   </div>
 
@@ -51,7 +51,7 @@
           <div class="container">
               <div class="flex items-stretch justify-between relative">
                   <div class="flex items-center">
-                      <a class="lg:hidden mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
+                      <a class=" mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
                         <i class="sicon-menu text-primary text-2xl"></i>
                       </a>
                       <custom-main-menu></custom-main-menu>
@@ -82,7 +82,7 @@
        </div>
       </div>
   </div>
-  <script>alert("hello")</script>
+
 </header>
 {% if store.scope %}
     <salla-scopes selection="{{ store.scope.display_as == 'popup' ? 'mandatory' : 'optional' }}"></salla-scopes>

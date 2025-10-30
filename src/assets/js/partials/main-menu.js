@@ -98,7 +98,7 @@ class NavigationMenu extends HTMLElement {
         return `
         <li class="${this.getDesktopClasses(menu, isRootMenu)}" ${menu.attrs}>
             <a href="${menu.url}" aria-label="${menu.title || 'category'}" ${menu.link_attrs}>
-                <span>${menu.title} Youssef Allam</span>
+                <span>${menu.title} </span>
             </a>
             ${this.hasChildren(menu) ? `
                 <div class="sub-menu ${this.hasProducts(menu) ? 'w-full left-0 flex' : 'w-56'}">
@@ -121,8 +121,8 @@ class NavigationMenu extends HTMLElement {
     getMenus() {
         return this.menus.map((menu) => `
             ${this.getMobileMenu(menu, this.displayAllText)}
-            ${this.getDesktopMenu(menu, true)}
         `).join('\n');
+        // ${this.getDesktopMenu(menu, true)}
     }
 
     /**
@@ -131,7 +131,7 @@ class NavigationMenu extends HTMLElement {
     render() {
         this.innerHTML =  `
         <nav id="mobile-menu" class="mobile-menu">
-            <ul class="main-menu"><li>Youssef Allam</li>${this.getMenus()}</ul>
+            <ul class="main-menu">${this.getMenus()}</ul>
             <button class="btn--close close-mobile-menu sicon-cancel lg:hidden"></button>
         </nav>
         <button class="btn--close-sm close-mobile-menu sicon-cancel hidden"></button>`;
