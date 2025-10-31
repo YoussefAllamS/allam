@@ -53,10 +53,24 @@
                         <i class="sicon-menu text-primary text-2xl"></i>
                       </a>
                       <custom-main-menu></custom-main-menu>
-                                                      {# Search bar #}
-          <div class="header-search flex-1">
-            <salla-search inline oval height="36"></salla-search>
+                      <!-- Button to Activate the Modal-->
+<button onclick="(function(){event.preventDefault();
+    document.querySelector('#subscribe-modal').open();
+    return false;})();
+    "data-modal-id="subscribe-modal">
+        <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+
+<!-- Modal Settings -->
+<salla-modal id="subscribe-modal">
+        <div class="header-search flex-1">
+          <salla-search inline oval height="36"></salla-search>
           </div>
+</salla-modal> 
+                       {# Search bar #}
+          {# <div class="header-search flex-1">
+          <salla-search inline oval height="36"></salla-search>
+          </div> #}
                   </div>
                   <div class="flex items-center justify-end">
                       {% if user.type=='user' %}
