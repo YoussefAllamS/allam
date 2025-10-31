@@ -1,0 +1,21 @@
+#Search-modal .s-modal-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: --color-primary;
+}
+#Search-modal .s-modal-body
+{
+    width: 80%;
+    padding: 0;
+}
+#Search-modal input
+{
+    font-size: 20px;
+}
+.header_up_allam
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

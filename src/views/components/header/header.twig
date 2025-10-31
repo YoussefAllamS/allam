@@ -8,17 +8,18 @@
 {% set important_links = theme.settings.get('important_links') %}
 <header class="store-header">
   {# Top Nav #}
-  <div class="top-navbar">
+  
+  {# <div class="top-navbar">
     <div class="container flex justify-between">
       <div class="flex-1 flex items-center gap-2">
-          {# Footer Menu #}
+          Footer Menu
           {% if important_links %}
-            {# <salla-menu source="footer" topnav></salla-menu> #}
+            <salla-menu source="footer" topnav></salla-menu>
             
           {% endif %}
 
-          {# Language & Currency Component #}
-          {# <div class="header-buttons">
+          Language & Currency Component
+          <div class="header-buttons">
               {% if store.settings.is_multilingual or store.settings.currencies_enabled %}
                   <button type="button" onclick="salla.event.dispatch('localization::open')" class="btn--rounded-gray basis-0">
                       <span class="flag iti__flag iti__{{ user.language.country_code }} rounded-sm"></span>
@@ -26,9 +27,9 @@
                   </button>
                   <salla-localization-modal></salla-localization-modal>
               {% endif %}
-          </div> #}
+          </div>
 
-          {# Scopes | Branches #}
+          Scopes | Branches
           {% if store.scope %}
               <button class="btn--rounded-gray"
                       onclick="salla.event.dispatch('scopes::open', {'mode': 'default'})">
@@ -39,15 +40,16 @@
 
       </div>
 
-      {# <salla-contacts is-header></salla-contacts> #}
+      <salla-contacts is-header></salla-contacts>
     </div>
-  </div>
+  </div> 
+  #}
 
   {# Main Nav #}
   <div id="mainnav" class="main-nav-container shadow-default bg-white">
       <div class="inner bg-inherit">
           <div class="container">
-              <div class="flex items-stretch justify-between relative">
+              <div class="flex items-stretch justify-between relative header_up_allam">
                   <div class="flex items-center">
                       <a class=" mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
                         <i class="sicon-menu text-primary text-2xl"></i>
@@ -55,38 +57,23 @@
                       <custom-main-menu></custom-main-menu>
                       <!-- Button to Activate the Modal-->
 <button onclick="(function(){event.preventDefault();
-    document.querySelector('#subscribe-modal').open();
+    document.querySelector('#Search-modal').open();
     return false;})();
-    "data-modal-id="subscribe-modal">
-        <i class="fa-solid fa-magnifying-glass"></i>
+    "data-modal-id="Search-modal">
+        <i class="fa-solid fa-magnifying-glass" style="color: var(--color-primary);"></i>
 </button>
 
 <!-- Modal Settings -->
-<salla-modal id="subscribe-modal">
-        <div class="header-search flex-1">
-          <salla-search inline oval height="36"></salla-search>
+     <salla-modal id="Search-modal">
+          {# Search bar #}
+          <div class="header-search flex-1">
+          <salla-search inline oval height="46px"></salla-search>
           </div>
-</salla-modal> 
-                       {# Search bar #}
-          {# <div class="header-search flex-1">
-          <salla-search inline oval height="36"></salla-search>
-          </div> #}
+     </salla-modal> 
                   </div>
-                  <div class="flex items-center justify-end">
-                      {% if user.type=='user' %}
-                        <salla-user-menu avatar-only show-header></salla-user-menu>
-                      {% else %}
-                          <button class="header-btn" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
-                            <i class="header-btn__icon sicon-user-circle"></i>
-                          </button>
-                      {% endif %}
-                      <salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
-                        <i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i>
-                      </salla-cart-summary>
-                  </div>
-              </div>
-          </div>
-          <div class="flex justify-center items-center">
+
+                  {# center-logo #}
+      <div class="flex justify-center items-center">
            <a class="navbar-brand" href="{{ store.url }}">
               <img fetchpriority="high" width="100%" height="100%" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
                   {% if is_page('index') %}
@@ -95,7 +82,22 @@
                       <h2 class="sr-only">{{ store.name }}</h2>
                   {% endif %}
             </a>
-       </div>
+      </div>
+                  <div class="flex items-center justify-end">
+                      {% if user.type=='user' %}
+                        <salla-user-menu avatar-only show-header></salla-user-menu>
+                      {% else %}
+                          <button class="header-btn" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
+                            <i class="header-btn__icon sicon-user-circle"></i>
+                          </button>
+                      {% endif %}
+                      
+                      <salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
+                        <i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i>
+                      </salla-cart-summary>
+                  </div>
+              </div>
+          </div>
       </div>
   </div>
 
