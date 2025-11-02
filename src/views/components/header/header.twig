@@ -27,6 +27,18 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+#mainnav
+{
+    background-color: transparent;
+        position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.Allam-fixed-header
+{
+    backdrop-filter: blur(40px);
+}
 </style>
 {% set important_links = theme.settings.get('important_links') %}
 <header class="store-header">
@@ -128,3 +140,11 @@
 {% if store.scope %}
     <salla-scopes selection="{{ store.scope.display_as == 'popup' ? 'mandatory' : 'optional' }}"></salla-scopes>
 {% endif %}
+
+
+{# 
+main-nav-container shadow-default bg-white
+
+main-nav-container shadow-default bg-white fixed-pinned animated fixed-header
+
+#}
