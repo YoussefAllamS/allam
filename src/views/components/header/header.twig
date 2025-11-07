@@ -11,12 +11,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: --color-primary;
 }
 #Search-modal .s-modal-body
 {
-    width: 80%;
+    width: 90%;
     padding: 0;
+    position: fixed;
+    top: 20%;
+    height: fit-content;
+    margin: 5%;
 }
 #Search-modal input
 {
@@ -47,6 +50,15 @@
 .Allam-fixed-header .navbar-brand img
 {
     filter: invert(0) !important;
+}
+.header-btn__icon, #mainnav i 
+{
+    border:none;
+    color:white;
+}
+.Allam-fixed-header i
+{
+    color:black !important;
 }
 </style>
 {% set important_links = theme.settings.get('important_links') %}
@@ -104,7 +116,7 @@
     document.querySelector('#Search-modal').open();
     return false;})();
     "data-modal-id="Search-modal">
-        <i class="fa-solid fa-magnifying-glass" style="color: var(--color-primary);"></i>
+        <i class="fa-solid fa-magnifying-glass" ></i>
 </button>
 
 <!-- Modal Settings -->
