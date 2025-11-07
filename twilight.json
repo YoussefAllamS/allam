@@ -850,6 +850,13 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "ca183208-16e6-4ad6-b40f-768b8452c99c",
+            "title": "Allam-slid",
+            "icon": "sicon-d-rotate",
+            "path": "Allam-slid",
+            "fields": []
         }
     ],
     "support_url": null,
