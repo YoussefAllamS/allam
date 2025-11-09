@@ -839,10 +839,10 @@
                             "format": "image",
                             "required": true,
                             "placeholder": "",
-                            "description": "* المقاس المناسب للصورة هو 640×427 بكسل",
+                            "description": "* المقاس المناسب للصورة هو 120×170 بكسل",
                             "settings": {
-                                "height": 427,
-                                "width": 640
+                                "height": 170,
+                                "width": 120
                             }
                         },
                         {
