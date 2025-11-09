@@ -9,9 +9,9 @@
 <body>
     <style>
     html,
-body {
+#drag-container {
   /* for touch screen */
-  touch-action: none; 
+  /* touch-action: none;  */
 }
 
 #drag-container, #spin-container {
@@ -143,7 +143,11 @@ body {
 
 
 // You can change global variables here:
-var radius = 240; // how big of the radius
+var radius = 250; // how big of the radius
+if(window.screen.width <= 500)
+{
+    radius = 180;
+}
 var autoRotate = true; // auto rotate or not
 var rotateSpeed = -60; // unit: seconds/360 degrees
 var imgWidth = 120; // width of images (unit: px)
