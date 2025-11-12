@@ -6,6 +6,11 @@
 				<a href="{{ link('/') }}" class="flex items-center m-0">
 					<h3>{{store.name}}</h3>
 				</a>
+				  <div class="All-line flex items-center justify-center">
+                     <div class="line"></div>
+                     <div class="Circle"></div>
+                   <div class="line"></div>
+                  </div>
 				{% if store.description %}
 					<p class="max-w-sm leading-6 mb-6">
 						{{ store.description|raw }}
@@ -68,3 +73,42 @@
 </div>
 
 <span class="hidden bottom-2 rtl:pl-24 ltr:pr-24 md:grid-cols-3"></span></footer>
+
+<style>
+  .All-line
+  {
+    width: 100%;
+  }
+  .All-line .line
+  {
+    width: 50px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: black;
+    margin: 5px;
+  }
+  .All-line .Circle
+  {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 5px;
+  }
+  .s-block__title__Alla
+  {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .s-products-list-wrapper
+  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+   .s-products-list-wrapper .s-product-card-vertical
+   {
+    width: 250px;
+   }
+</style>
